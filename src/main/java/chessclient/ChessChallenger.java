@@ -155,8 +155,29 @@ public class ChessChallenger {
         return false;
     }
 
+    private static void printPlayerDetails(ChessChallenger chessChallenger) {
+        System.out.println("   PLAYER 1:  " + chessChallenger.playerName1);
+        System.out.println("   White:     " + chessChallenger.firstMove1);
+        System.out.println("   Black:     " + !chessChallenger.firstMove1);
+        System.out.println("   aiLevel:   " + chessChallenger.aiLevel1);
+        System.out.println("   ServerURL: " + chessChallenger.baseUrl1);
+        System.out.println();
+        System.out.println();
+        System.out.println("   PLAYER 2:  " + chessChallenger.playerName2);
+        System.out.println("   White:     " + chessChallenger.firstMove2);
+        System.out.println("   Black:     " + !chessChallenger.firstMove2);
+        System.out.println("   aiLevel:   " + chessChallenger.aiLevel2);
+        System.out.println("   ServerURL: " + chessChallenger.baseUrl2);
+    }
+
     public static void main(String[] args) throws IOException {
+        System.out.println("**********************************************");
+        System.out.println("*                                            *");
+        System.out.println("*       WELCOME TO THE CHESS CHALLENGE       *");
+        System.out.println("*                                            *");
+        System.out.println("**********************************************");
         ChessChallenger chessChallenger = new ChessChallenger(args);
+        printPlayerDetails(chessChallenger);
         chessChallenger.startChallenge();
         System.out.println(chessChallenger);
     }
