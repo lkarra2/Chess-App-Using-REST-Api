@@ -13,8 +13,9 @@ RUN wget -O /tmp/capstan-install.sh https://raw.githubusercontent.com/mikelangel
     && /root/bin/capstan package pull openjdk8-zulu-full \
     && /root/bin/capstan package pull openjdk8-zulu-compact1 \
     && /root/bin/capstan package pull osv.bootstrap
-COPY . chess-server
-RUN (cd chess-server; ./gradlew build installDist -x test) 
+# COPY . chess-server
+RUN git clone git@bitbucket.org:lkarra2/lakshmi_manaswi_karra_cs441_hw4.git
+RUN (cd chess-server; ./gradlew build installDist -x test)
 EXPOSE 8080
 CMD /chess-server/docker-utils/show-ip.sh && chess-server
 
