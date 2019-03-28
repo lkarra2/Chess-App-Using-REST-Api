@@ -1,7 +1,9 @@
 
-
-Command to build Docker:
-`docker build -t chess-server . `
+1. Run docker
+2. docker build --no-cache -t chess-server . `To build docker image`
+3. docker run -it -p 8080:8080 chess-server `To run the server on port 8080`
+4. docker run -it -p 8090:8090 -e 8090 chess-server chess-server --server.port=8090 `Explicitly specifying port 8090`
+5. docker run -it chess-server chess-client ``
 
 chess-server: Name of the command
 
