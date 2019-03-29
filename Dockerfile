@@ -1,5 +1,5 @@
 FROM openjdk:8
-ENV PATH="/chess-server/build/install/chess-server/bin:/root/bin:${PATH}"
+ENV PATH="/chess-server/bin:/root/bin:${PATH}"
 COPY 99fixbadproxy /etc/apt/apt.conf.d/ 
 RUN apt-get clean \
     && apt-get update \
@@ -13,9 +13,10 @@ RUN wget -O /tmp/capstan-install.sh https://raw.githubusercontent.com/mikelangel
     && /root/bin/capstan package pull openjdk8-zulu-full \
     && /root/bin/capstan package pull openjdk8-zulu-compact1 \
     && /root/bin/capstan package pull osv.bootstrap
-COPY . chess-server
+COPY build/install/chess-server chess-server
 # RUN git clone git@bitbucket.org:lkarra2/lakshmi_manaswi_karra_cs441_hw4.git
-RUN (cd chess-server; ./gradlew build installDist -x test)
+# RUN (cd chess-server; ./gradlew build installDist -x test)
 EXPOSE 8080
-CMD /chess-server/docker-utils/show-ip.sh && chess-server
+CMD chess-server
+# CMD /chess-server/docker-utils/show-ip.sh && chess-server
 

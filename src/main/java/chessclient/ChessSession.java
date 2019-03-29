@@ -17,7 +17,7 @@ import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 
 public class ChessSession {
-
+    //TODO Add logging
     private String baseUrl;
     private String playerName;
     private boolean firstMove;

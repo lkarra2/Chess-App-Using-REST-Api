@@ -137,6 +137,7 @@ public class ChessChallenger {
     }
 
     private boolean gameHasEnded() throws IOException {
+        //TODO CHeck for all initial input args
         chessSession1.status();
         chessSession2.status();
         String winner = "";

@@ -7,6 +7,7 @@ import java.util.HashMap;
 
 public class ChessEngine implements IChessEngine {
     //TODO Add try catch for all functions
+    //TODO Add logging
 
     HashMap<Session, ChessGame> map = new HashMap<>();
 
