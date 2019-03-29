@@ -1,0 +1,113 @@
+
+runtime: java
+
+config_set: 
+
+   ################################################################
+   ### This is one configuration set (feel free to rename it).  ###
+   ################################################################
+   chess-server:
+      # REQUIRED
+      # Fully classified name of the main class.
+      # Example value: main.Hello
+      main: chessserver.Application
+      
+      # OPTIONAL
+      # A list of paths where classes and other resources can be found.
+      # By default, the unikernel root "/" is added to the classpath.
+      # Example value: classpath:
+      #                   - /
+      #                   - /src
+      classpath:
+         - /chess-server/lib/chess-1.0.jar
+         - /chess-server/lib/spring-boot-starter-web-2.1.3.RELEASE.jar
+         - /chess-server/lib/spring-boot-starter-actuator-2.1.3.RELEASE.jar
+         - /chess-server/lib/httpclient-4.5.7.jar
+         - /chess-server/lib/json-20171018.jar
+         - /chess-server/lib/jChess-1.5.jar
+         - /chess-server/lib/spring-boot-starter-json-2.1.3.RELEASE.jar
+         - /chess-server/lib/spring-boot-starter-2.1.3.RELEASE.jar
+         - /chess-server/lib/spring-boot-starter-tomcat-2.1.3.RELEASE.jar
+         - /chess-server/lib/hibernate-validator-6.0.14.Final.jar
+         - /chess-server/lib/spring-webmvc-5.1.5.RELEASE.jar
+         - /chess-server/lib/spring-web-5.1.5.RELEASE.jar
+         - /chess-server/lib/spring-boot-actuator-autoconfigure-2.1.3.RELEASE.jar
+         - /chess-server/lib/micrometer-core-1.1.3.jar
+         - /chess-server/lib/httpcore-4.4.11.jar
+         - /chess-server/lib/commons-logging-1.2.jar
+         - /chess-server/lib/commons-codec-1.11.jar
+         - /chess-server/lib/spring-boot-autoconfigure-2.1.3.RELEASE.jar
+         - /chess-server/lib/spring-boot-actuator-2.1.3.RELEASE.jar
+         - /chess-server/lib/spring-boot-2.1.3.RELEASE.jar
+         - /chess-server/lib/spring-boot-starter-logging-2.1.3.RELEASE.jar
+         - /chess-server/lib/javax.annotation-api-1.3.2.jar
+         - /chess-server/lib/spring-context-5.1.5.RELEASE.jar
+         - /chess-server/lib/spring-aop-5.1.5.RELEASE.jar
+         - /chess-server/lib/spring-beans-5.1.5.RELEASE.jar
+         - /chess-server/lib/spring-expression-5.1.5.RELEASE.jar
+         - /chess-server/lib/spring-core-5.1.5.RELEASE.jar
+         - /chess-server/lib/snakeyaml-1.23.jar
+         - /chess-server/lib/jackson-datatype-jdk8-2.9.8.jar
+         - /chess-server/lib/jackson-datatype-jsr310-2.9.8.jar
+         - /chess-server/lib/jackson-module-parameter-names-2.9.8.jar
+         - /chess-server/lib/jackson-databind-2.9.8.jar
+         - /chess-server/lib/tomcat-embed-websocket-9.0.16.jar
+         - /chess-server/lib/tomcat-embed-core-9.0.16.jar
+         - /chess-server/lib/tomcat-embed-el-9.0.16.jar
+         - /chess-server/lib/validation-api-2.0.1.Final.jar
+         - /chess-server/lib/jboss-logging-3.3.2.Final.jar
+         - /chess-server/lib/classmate-1.3.4.jar
+         - /chess-server/lib/HdrHistogram-2.1.9.jar
+         - /chess-server/lib/LatencyUtils-2.0.3.jar
+         - /chess-server/lib/logback-classic-1.2.3.jar
+         - /chess-server/lib/log4j-to-slf4j-2.11.2.jar
+         - /chess-server/lib/jul-to-slf4j-1.7.25.jar
+         - /chess-server/lib/spring-jcl-5.1.5.RELEASE.jar
+         - /chess-server/lib/jackson-annotations-2.9.0.jar
+         - /chess-server/lib/jackson-core-2.9.8.jar
+         - /chess-server/lib/logback-core-1.2.3.jar
+         - /chess-server/lib/slf4j-api-1.7.25.jar
+         - /chess-server/lib/log4j-api-2.11.2.jar
+         - /chess-server/lib/tomcat-annotations-api-9.0.16.jar
+      
+      # OPTIONAL
+      # Initial and maximum JVM memory size.
+      # Example value: xms: 512m
+      xms: 512m
+      xmx: 1024m
+      
+      # OPTIONAL
+      # A list of JVM args.
+      # Example value: jvm_args:
+      #                   - -Djava.net.preferIPv4Stack=true
+      #                   - -Dhadoop.log.dir=/hdfs/logs
+      #jvm_args:
+      #   - <list>
+      
+      # OPTIONAL
+      # A list of command line args used by the application.
+      # Example value: args:
+      #                   - argument1
+      #                   - argument2
+      #args:
+      #   - <list>
+      
+      # OPTIONAL
+      # Environment variables.
+      # A map of environment variables to be set when unikernel is run.
+      # Example value:  env:
+      #                    PORT: 8000
+      #                    HOSTNAME: www.myserver.org
+      #env:
+      #   <key>: <value>
+      
+      # OPTIONAL
+      # Configuration to contextualize.
+      #base: "<package-name>:<config_set>"   
+
+   # Add as many named configurations as you need
+
+# OPTIONAL
+# What config_set should be used as default.
+# This value can be overwritten with --runconfig argument.
+config_set_default: chess-server

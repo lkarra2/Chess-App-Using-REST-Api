@@ -18,4 +18,11 @@ Running Docker image on Dockerhub:
 5. docker run -it <dockerImageName> chess-client <IPAddress>:<portNumber> `Running the chess client`
 6. docker run -it <dockerImageName> chess-challenger -URL1 <IPAddress>:<portNumber> -URL2 <IPAddress>:<portNumber>
 
+capstan package init --help
+openjdk8-zulu-full
+
+to build capstan --> docker run -it -v $(pwd)/capstan-project:/capstan-project chess-server bash
+
+capstan package init -n chess-server -t 'Chess Server' -a 'Lakshmi Manaswi Karra' -v '1.0' --require openjdk8-zulu-full --runtime java
+capstan package compose chess-server -p
 

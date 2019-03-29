@@ -1,0 +1,7 @@
+name: chess-server
+title: Chess Server
+author: Lakshmi Manaswi Karra
+version: "1.0"
+require:
+- openjdk8-zulu-full
+created: 2019-03-29T15:27:10Z
