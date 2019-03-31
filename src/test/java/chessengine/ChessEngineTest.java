@@ -1,14 +1,12 @@
 package chessengine;
 
 import chessgame.Move;
-import chessengine.ChessEngine;
-import chessengine.Response;
-import chessengine.Session;
 import org.junit.Test;
 
 import java.util.Scanner;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 
 public class ChessEngineTest {

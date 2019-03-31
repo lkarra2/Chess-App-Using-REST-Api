@@ -3,3 +3,9 @@
 /.gradle/
 /out/
 /logs/
+build
+/awscli-bundle.zip
+/get-pip.py
+/capstan-project/chess-server.qemu
+/shared/
+/awscli-bundle/

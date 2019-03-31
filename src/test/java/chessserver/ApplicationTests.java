@@ -56,26 +56,6 @@ public class ApplicationTests {
     private TestRestTemplate testRestTemplate;
 
     @Test
-    public void shouldReturn200WhenSendingRequestToController() throws Exception {
-        @SuppressWarnings("rawtypes")
-        final String baseUrl = "http://localhost:" + this.port + "/echo";
-        URI uri = new URI(baseUrl);
-        Echo echo = new Echo();
-        echo.setMessage("MANA");
-
-        HttpHeaders headers = new HttpHeaders();
-        headers.set("X-COM-PERSIST", "true");
-
-        HttpEntity<Echo> request = new HttpEntity<>(echo, headers);
-
-        ResponseEntity<Echo> result = this.testRestTemplate.postForEntity(uri, request, Echo.class);
-
-        //Verify request succeed
-        Assert.assertEquals(200, result.getStatusCodeValue());
-        Assert.assertEquals("MANA", result.getBody().getMessage());
-    }
-
-    @Test
     public void testNewGameAsBlack() throws URISyntaxException {
         @SuppressWarnings("rawtypes")
         final String baseUrl = "http://localhost:" + this.port + "/new-game";

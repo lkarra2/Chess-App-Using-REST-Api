@@ -61,11 +61,6 @@ public class GameController {
         }
     }
 
-    @PostMapping("/echo")
-    public Echo echo(@RequestBody Echo echoInput) {
-        return echoInput;
-    }
-
     @PostMapping("/new-game")
     public Response newGame(@RequestBody NewGameRequest request) {
         try {

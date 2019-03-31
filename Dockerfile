@@ -13,7 +13,10 @@ RUN wget -O /tmp/capstan-install.sh https://raw.githubusercontent.com/mikelangel
     && /root/bin/capstan package pull openjdk8-zulu-full \
     && /root/bin/capstan package pull openjdk8-zulu-compact1 \
     && /root/bin/capstan package pull osv.bootstrap
-COPY build/install/chess-server chess-server
+COPY ./build/install/chess-server chess-server
+COPY ./build/install/chess-server capstan-project/chess-server
+COPY ./capstan-project/create-osv-image capstan-project/create-osv-image
+COPY ./capstan-project/meta capstan-project/meta
 # RUN git clone git@bitbucket.org:lkarra2/lakshmi_manaswi_karra_cs441_hw4.git
 # RUN (cd chess-server; ./gradlew build installDist -x test)
 EXPOSE 8080
