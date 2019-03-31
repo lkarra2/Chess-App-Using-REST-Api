@@ -28,7 +28,9 @@ This Project is the Virtuallization of the Open Source project [JavaOpenChess]()
 **ChessClient Class** - Runs a client that connects to a running Chess Server and allows you to play by passing moves in the form [eg: b2-b4]
 **ChessChallenger Class** - Runs a chess challenge between two running chess servers and plays till there is a winner
 
-- [YouTube Link] () 
+- [YouTube Link showing working of 2 Chess VAP instances on AWS EC2](https://youtu.be/4p11jsvx50A) 
+
+- [Dockerhub Repository](https://cloud.docker.com/repository/docker/lkarra2/chess-server/general)
 
 ### Prerequisites
 
@@ -157,3 +159,6 @@ capstan package compose chess-server -p
 
 To run:
 capstan run -f 8080:8080 chess-server
+
+aws s3 cp /Users/manaswikarra/CloudComputing/CS441_HW4/lakshmi_manaswi_karra_cs441_hw4/shared/chess-server.raw s3://chess-service/ 
+

@@ -1,0 +1,8 @@
+{
+"Description": "Chess Server Raw Image",
+    "Format": "raw",
+    "UserBucket": {
+        "S3Bucket": "chess-service",
+        "S3Key": "chess-server.raw"
+    }
+}
