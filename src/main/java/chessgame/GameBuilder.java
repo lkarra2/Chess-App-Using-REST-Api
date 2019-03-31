@@ -10,6 +10,8 @@ import pl.art.lach.mateusz.javaopenchess.utils.Settings;
 
 public class GameBuilder {
 
+    // Class copied from JavaOpenChess, helps build() the game
+
     private Settings settings = new Settings(PlayerFactory.getInstance("", Colors.WHITE, PlayerType.COMPUTER), PlayerFactory.getInstance("", Colors.BLACK, PlayerType.COMPUTER));
 
     private boolean setPiecesForNewGame = true;

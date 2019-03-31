@@ -1,4 +1,3 @@
-# capstan package init -n chess-server -t "Chess Server" -a "Lakshmi Manaswi Karra" -v 1.0 --require openjdk8-zulu-full --runtime java
 capstan package compose chess-server -p
 
 cp /root/.capstan/repository/chess-server/chess-server.qemu .

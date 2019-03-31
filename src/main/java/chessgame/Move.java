@@ -2,6 +2,8 @@ package chessgame;
 
 public class Move {
 
+    // Creates a move by taking "begin" and "end"
+
     private String begin;
     private String end;
 

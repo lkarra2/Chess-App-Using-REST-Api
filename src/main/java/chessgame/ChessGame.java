@@ -17,6 +17,8 @@ import java.util.ArrayList;
 
 public class ChessGame {
 
+    // Wrapper around the JavaOpenChess, makes only necessary functions visible [newGame(), move(), quit()]
+
     private final String playerName;
     private final boolean firstMove;
     private final int matchMoves = 1000;

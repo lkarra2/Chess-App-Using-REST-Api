@@ -4,6 +4,9 @@ import java.util.Objects;
 import java.util.UUID;
 
 public class Session {
+
+    // It helps to keep track of the state of the game by storing unique ID
+
     String id;
 
     public void setId(String id) {

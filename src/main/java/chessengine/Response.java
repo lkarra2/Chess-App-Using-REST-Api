@@ -3,6 +3,9 @@ package chessengine;
 import chessgame.Move;
 
 public class Response {
+
+    // Return type of any function called on the server
+
     int status, gameStatus;
     String message, winner;
     Session session;

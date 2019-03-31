@@ -8,6 +8,9 @@ import java.net.URISyntaxException;
 import java.util.Scanner;
 
 public class ChessClient {
+
+    // Runs a client that connects to a running Chess Server and allows you to play by passing moves in the form [eg: b2-b4]
+
     private final ChessSession chessSession;
     private String baseUrl;
     private String playerName = "Local user";

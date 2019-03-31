@@ -6,8 +6,8 @@ import chessgame.Move;
 import java.util.HashMap;
 
 public class ChessEngine implements IChessEngine {
-    //TODO Add try catch for all functions
-    //TODO Add logging
+
+    // Implementation of the IChessEngine Interface
 
     HashMap<Session, ChessGame> map = new HashMap<>();
 

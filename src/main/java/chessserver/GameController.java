@@ -10,6 +10,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class GameController {
+
+    // Defines all the Postmapping functions ["/new-game", "/move", "/status", "/quit", "/delete"]
+
     private ChessEngine chessEngine = new ChessEngine();
 
     public static class NewGameRequest {

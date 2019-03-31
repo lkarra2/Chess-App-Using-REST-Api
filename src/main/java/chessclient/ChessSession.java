@@ -17,7 +17,9 @@ import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 
 public class ChessSession {
-    //TODO Add logging
+
+    // A helper Class that defines functions used by the ChessClient and ChessChallenger to create Client calls
+
     private String baseUrl;
     private String playerName;
     private boolean firstMove;

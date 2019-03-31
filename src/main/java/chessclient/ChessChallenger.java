@@ -7,6 +7,9 @@ import java.net.URI;
 import java.net.URISyntaxException;
 
 public class ChessChallenger {
+
+    // Runs a chess challenge between two running chess servers and plays till there is a winner
+
     private final ChessSession chessSession1;
     private final ChessSession chessSession2;
     private String baseUrl1;
